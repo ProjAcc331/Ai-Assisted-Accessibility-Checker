@@ -5,7 +5,7 @@ from google.genai import types
 import requests
 
 #WAVE API - 100 uses per month free
-APIKEY = "Dz9eZUmU5924"
+APIKEY = "" #insert your API key
 websiteUrl = input("Please enter the URL for the website you want to check:")
 
 response = requests.get(
@@ -25,7 +25,7 @@ Alerts: {data['categories']['alert']['count']}
 """
 
 #Google Gemini
-client = genai.Client(api_key='AIzaSyBvA2AB1Xr04QMDhzCLD46ZBAbuzWA95Sk')
+client = genai.Client(api_key='') #Insert your own API key
 
 response = client.models.generate_content(
    model = "models/gemini-flash-lite-latest",
